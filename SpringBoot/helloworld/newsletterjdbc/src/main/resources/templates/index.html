@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Interactive Newsletter</h1>
+        </div>
+        <div class="content">
+            <h2>Main Article Title</h2>
+            <p>This is the main content of your interactive newsletter. Include updates, stories, and more. Engage your readers with interesting and relevant content.</p>
+            <input type="email" id="email">
+            <button id="subscribeButton">Click Me</button>
+            <p id="thankYouMessage" style="display: none;">Thank you for clicking!</p>
+        </div>
+        <div class="footer">
+            <p>Footer Content &copy; 2024</p>
+        </div>
+
+        <!-- Css -->
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f6f6f6;
+            }
+            .container {
+                max-width: 600px;
+                margin: 0 auto;
+                background-color: #ffffff;
+                padding: 20px;
+            }
+            .header {
+                background-color: #007bff;
+                color: #ffffff;
+                padding: 10px;
+                text-align: center;
+            }
+            .content {
+                padding: 20px;
+                text-align: left;
+            }
+            .footer {
+                background-color: #333333;
+                color: #ffffff;
+                text-align: center;
+                padding: 10px;
+            }
+            button {
+                background-color: #007bff;
+                color: #ffffff;
+                padding: 10px;
+                border: none;
+                cursor: pointer;
+            }
+        </style>
+    </div>
+</body>
+<!-- Por fora do body para não ser carragado antes do html -->
+<script>
+    document.getElementById("subscribeButton").addEventListener("click", function() {
+        document.getElementById("thankYouMessage").style.display = "block";
+        // You can also do other actions here, like sending data to a server
+    });
+</script>
+</html>
+

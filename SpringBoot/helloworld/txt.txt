@@ -1,0 +1,3 @@
+o spring boot e um framework de java
+para desenvolvimento web
+gerar o prj angular no templates
