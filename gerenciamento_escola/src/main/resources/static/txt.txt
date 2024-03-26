@@ -1,0 +1,40 @@
+antes de tudo começar crio o html
+como ficar a organização:
+    -main/webaap/nome_projeto/todos os .java
+        static:
+        imagens
+        css
+        js
+        TEMPLATE:
+        .html
+para que o jpa funciona tem que configurar o banco de dados
+
+Extensões:
+draw.io integrator
+postgresSQL - Microsoft:
+
+com essa extensão, crio um arquivo .sql 
+digito o comando, pressiono CTRL + M, CTRL + R, 
+caso não for, crio a conexão com os dados de meu 
+banco, após isso se ocorrer tudo bem, ira aparecer
+uma menssagem de sucesso
+
+o que significa UML:
+
+A UML (do inglês Unified Modeling Language,
+em português Linguagem de Modelagem Unificada)
+é uma linguagem-padrão para a elaboração da estrutura
+de projetos de software.
+
+
+Verificar se o PostgresSQl está em execução:
+CTRL + SHIT + ESC
+e ver se está
+
+Tudo que está no reources em minúscolos
+
+Dica:
+
+View > Spring > arrato para minha barra lateral, ai vou ter um dashboard
+
+É o controller quem faz a navegação

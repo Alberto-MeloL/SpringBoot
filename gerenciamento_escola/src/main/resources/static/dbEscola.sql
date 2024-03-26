@@ -1,0 +1,1 @@
+CREATE DATABASE db_escola_turma_a;
