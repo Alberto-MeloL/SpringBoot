@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "GerenciamentoEscolaApplication",
+            "request": "launch",
+            "mainClass": "webapp.gerenciamento_escola.GerenciamentoEscolaApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-HelloworldApplication<helloworld>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "webapp.helloworld.HelloworldApplication",
+            "projectName": "helloworld",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
