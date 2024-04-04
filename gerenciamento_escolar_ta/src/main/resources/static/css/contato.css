@@ -1,0 +1,34 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 30%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #227766c7;
+    border-radius: 5px;
+}
+
+button{
+    width: 20%;
+    height: 3vh;
+    margin-top: 5%;
+    background-color: #134239;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+}
