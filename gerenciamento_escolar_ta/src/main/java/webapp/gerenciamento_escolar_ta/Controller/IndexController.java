@@ -9,32 +9,32 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class IndexController {
     @GetMapping("/")
     public String acessarIndex() {
-        return "index";
+        return "PaginasDeslogado/index";
     }
 
     @GetMapping("/sobre")
     public String acessarCadastro() {
-        return "sobre";
+        return "PaginasDeslogado/sobre";
     }
 
     @GetMapping("/contato")
     public String acessarContato() {
-        return "contato";
+        return "PaginasDeslogado/contato";
     }
 
     @GetMapping("/alunos")
     public String acessarAlunos() {
-        return "alunos";
+        return "PaginasLogado/aluno";
     }
 
     @GetMapping("/administradores")
     public String acessarAdministradores() {
-        return "administradores";
+        return "PaginasDeslogado/administradores";
     }
 
     @GetMapping("/professores")
     public String acessarProfessores() {
-        return "professores";
+        return "PaginasDeslogado/professores";
     }
 
 }

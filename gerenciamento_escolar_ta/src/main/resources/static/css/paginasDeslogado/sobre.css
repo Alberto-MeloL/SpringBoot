@@ -5,9 +5,20 @@
    justify-content: center;
    align-items: center;
 }
+.sobre-nos{
+    width: 90%;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #227766;
+    border-radius: 5px;
+}
 
-
-p{
+.sobre-nos h1{
+    color: #ffffff;
+}
+.paragrafo{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,9 +26,3 @@ p{
     color: #ffffff;
 }
 
-.sobre-nos{
-    width: 80%;
-    height: 55vh;
-    background-color: #227766;
-    border-radius: 5px;
-}

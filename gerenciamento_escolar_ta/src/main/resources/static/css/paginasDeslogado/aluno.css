@@ -1,0 +1,60 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.identificacao {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario {
+    width: 30%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #227766c7;
+    border-radius: 5px;
+}
+
+.container-formulario {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label-logar-aluno {}
+
+.input-logar-aluno {
+    outline: 0;
+    border: 3px solid #134239;
+    border-radius: 5px;
+}
+
+#btn-logar-aluno {
+    width: 20%;
+    height: 3vh;
+    margin-top: 5%;
+    background-color: #134239;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

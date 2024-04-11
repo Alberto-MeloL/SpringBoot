@@ -1,0 +1,80 @@
+body,
+html {
+    margin: 0;
+    top: 0;
+    padding: 0;
+}
+
+.titulo {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.identificador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 50%;
+    border: 10px solid #008000;
+    border-radius: 5px;
+    background-image: url('/image/imagem_spgbt.png');
+    background-repeat: repeat-x repeat-y;
+}
+
+.identificador h1 {
+    color: #008000;
+    background-color: rgba(0, 128, 0, 0.226);
+    border-radius: 10px;
+}
+
+
+header {
+    width: 100%;
+    height: 20vh;
+    background-color: #000000e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.titulo h1 {
+    color: #ffffff;
+}
+
+.titulo {
+    width: 80%;
+}
+
+ul,
+li {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px;
+    transition: border-bottom .5s ease-in-out;
+    border-bottom: 25px solid transparent;
+}
+
+a:hover{
+    background-color: #ffffff;
+    color: #000000;
+    border-bottom: 4px solid #227755;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre em contato</title>
+    <link rel="stylesheet" th:href="@{css/paginasDeslogado/contato.css}">
+    <link rel="stylesheet" th:href="@{css/paginasDeslogado/index.css}">
+</head>
+<body>
+    <div th:insert="~{fragmentos/header :: header}"></div>
+    <div class="container">
+
+        <form  class="formulario" action="">
+            <div class="container-formulario">
+            <label class="label-contato" for="email">Email</label>
+            <input class="input-contato" type="email" name="email">
+            <label class="label-contato" for="">Escreva aqui</label>
+            <input class="input-contato" type="text" name="texto">
+            <button id="btn-cadastrar" type="submit">Enviar</button>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administradores</title>
+    <link rel="stylesheet" th:href="@{css/paginasDeslogado/administrador.css}">
+    <link rel="stylesheet" th:href="@{css/paginasDeslogado/index.css}">
+</head>
+<body>
+    <div th:insert="~{fragmentos/header :: header}"></div>
+
+    <div class="exibir-mensagens"></div>
+    <div class="container">
+        <div class="identificacao">
+            <h1>Entrar como Administrador</h1>
+        </div>
+
+        <form  class="formulario" action="">
+            <div class="container-formulario">
+            <label class="label-logar-administrador" for="email">Seu Email</label>
+            <input class="input-logar-administrador" type="email" name="email">
+            <label class="label-logar-administrador" for="">Sua Senha</label>
+            <input class="input-logar-administrador" type="text" name="texto">
+            <button id="btn-logar-administrador" type="submit">Entrar</button>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

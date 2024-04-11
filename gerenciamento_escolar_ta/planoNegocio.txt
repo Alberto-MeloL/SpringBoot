@@ -1,0 +1,19 @@
+pré cadastro adm
+o que cada um pode fazer
+administrador[
+    cadastrar professor
+    cadastrara alunos
+    capacidade de excluir os dois
+]
+
+professor[
+    cadastrar sua matéria
+    capacidade de excluir sua matéria
+    dar nota aos alunos/média
+]
+
+alunos[
+    se cadastrar em uma matéria
+    realizar tarefas
+    não pede sair de uma matéria até que seja concluida 
+]
