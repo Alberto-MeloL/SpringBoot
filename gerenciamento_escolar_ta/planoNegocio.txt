@@ -17,3 +17,5 @@ alunos[
     realizar tarefas
     não pede sair de uma matéria até que seja concluida 
 ]
+
+poicoes/medidas
