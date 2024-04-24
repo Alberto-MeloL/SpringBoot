@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmnls:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pré-Cadastro</title>
+    <link rel="stylesheet" th:href="@{css/paginasLogado/preCadAdministrador.css}">
+</head>
+<body>
+    <div th:insert="~{fragmentos/headerPreCadAdm :: header}"></div>
+
+    <div class="exibir-mensagens"></div>
+    <div class="container">
+        <div class="identificacao">
+            <h1>Fazer Pré-Cadastro de Administrador</h1>
+        </div>
+
+        <form  class="formulario" action="cadastrar-adm" method="post">
+            <div class="container-formulario">
+            <label class="label-pre-cad-administrador" for="email">Digite o email</label>
+            <input class="input-pre-cad-administrador" type="email" name="email">
+            <label class="label-pre-cad-administrador" for="">Digite o cpf</label>
+            <input class="input-pre-cad-administrador" type="text" name="cpf">
+            <button id="btn-pre-cad-administrador" type="submit">Cadastrar</button>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

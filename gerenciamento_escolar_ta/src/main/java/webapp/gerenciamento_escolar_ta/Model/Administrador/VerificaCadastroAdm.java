@@ -11,8 +11,8 @@ public class VerificaCadastroAdm implements Serializable {
     // atributos
 
     @Id
-    String cpf;
-    String email;
+    private String cpf;
+    private String nome;
 
     public String getCpf() {
         return cpf;
@@ -22,11 +22,11 @@ public class VerificaCadastroAdm implements Serializable {
         this.cpf = cpf;
     }
 
-    public String getEmail() {
-        return email;
+    public String getNome() {
+        return nome;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 }

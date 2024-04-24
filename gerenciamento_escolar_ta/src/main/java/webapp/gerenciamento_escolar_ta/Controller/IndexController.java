@@ -37,4 +37,11 @@ public class IndexController {
         return "paginasLogado/professor";
     }
 
+    // pré-cadastro administrador
+
+    @GetMapping("/pre-cadastro")
+public String acessarPreCadAdm(){
+    return "paginasLogado/pre-cadastro";
+}
+
 }

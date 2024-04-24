@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmnls:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,12 +16,12 @@
             <h1>Entrar como Administrador</h1>
         </div>
 
-        <form  class="formulario" action="">
+        <form  class="formulario" action="cadastrar-adm" method="post">
             <div class="container-formulario">
             <label class="label-logar-administrador" for="email">Seu Email</label>
             <input class="input-logar-administrador" type="email" name="email">
             <label class="label-logar-administrador" for="">Sua Senha</label>
-            <input class="input-logar-administrador" type="text" name="texto">
+            <input class="input-logar-administrador" type="text" name="cpf">
             <button id="btn-logar-administrador" type="submit">Entrar</button>
         </div>
         </form>
