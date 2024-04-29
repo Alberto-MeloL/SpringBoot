@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+    <link rel="stylesheet" th:href="@{css/paginasDeslogado/aluno.css}">
+    <link rel="stylesheet" th:href="@{css/paginasDeslogado/index.css}">
+</head>
+<body>
+    <div th:insert="~{fragmentos/header :: header}"></div>
+    <div class="exibir-mensagens"></div>
+
+    <div class="container">
+
+        <div class="identificacao">
+            <h1>Entrar como Administrador</h1>
+        </div>
+        <form  class="formulario" action="acesso-adm" method="post">
+            <div class="container-formulario">
+            <label class="label-logar-adm" for="cpf">Seu CPF</label>
+            <input class="input-logar-adm" type="text" name="cpf">
+            <label class="label-logar-adm" for="senha">Sua Senha</label>
+            <input class="input-logar-adm" type="text" name="senha">
+            <button id="btn-logar-adm" type="submit">Entrar</button>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

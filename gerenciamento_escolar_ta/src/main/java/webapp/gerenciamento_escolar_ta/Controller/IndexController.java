@@ -3,7 +3,7 @@ package webapp.gerenciamento_escolar_ta.Controller;
 import org.springframework.stereotype.Controller;
 //aqui ficam as rotas
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
 
 @Controller
 public class IndexController {
@@ -37,6 +37,11 @@ public class IndexController {
         return "paginasLogado/professor";
     }
 
+    @GetMapping("/acesso-adm")
+    public String acessarAdm() {
+        return "paginasDeslogado/acesso-adm";
+    }
+    
     // pré-cadastro administrador
 
     @GetMapping("/pre-cadastro")

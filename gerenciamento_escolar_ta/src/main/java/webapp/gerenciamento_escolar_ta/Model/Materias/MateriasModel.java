@@ -1,29 +1,31 @@
 package webapp.gerenciamento_escolar_ta.Model.Materias;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class MateriasModel {
-    private String nomeMateria;
-    private double nota;
+ @Id
+ private Long id;
+ private String nome;
 
-    public MateriasModel(String nomeMateria, double nota) {
+ public MateriasModel(){}
 
-        this.nomeMateria = nomeMateria;
-        this.nota = nota;
+public Long getId() {
+    return id;
+}
 
-    }
+public void setId(Long id) {
+    this.id = id;
+}
 
-    public String getNomeMateria() {
-        return nomeMateria;
-    }
+public String getNome() {
+    return nome;
+}
 
-    public void setNomeMateria(String nomeMateria) {
-        this.nomeMateria = nomeMateria;
-    }
+public void setNome(String nome) {
+    this.nome = nome;
+}
 
-    public double getNota() {
-        return nota;
-    }
-
-    public void setNota(double nota) {
-        this.nota = nota;
-    }
+ 
 }
