@@ -41,7 +41,7 @@ public class AdministradorController {
     @PostMapping("pre-cad-adm")
     public ModelAndView preCadastrarAdm(VerificaCadastroAdm adm, RedirectAttributes attributes) {
         boolean verificaCpf = verifCadAdm.existsById(adm.getCpf());
-        ModelAndView mv = new ModelAndView("redirect:/index");
+        ModelAndView mv = new ModelAndView("redirect:/");
         try {
             if (!verificaCpf) {
 
@@ -170,7 +170,7 @@ public class AdministradorController {
 
     @PostMapping("add-aluno")
     public ModelAndView cadProfessor(VerificaCadAluno aluno, RedirectAttributes attributes) {
-       ModelAndView mv = new ModelAndView("redirect:/index");
+       ModelAndView mv = new ModelAndView("redirect:/");
 
        // Verifica se o email já está cadastrado
        boolean verificaEmail = verificaCadAluno.existsById(aluno.getEmail());
@@ -195,7 +195,7 @@ public class AdministradorController {
     
     @PostMapping("logout-adm")
     public ModelAndView logoutAdm(RedirectAttributes attributes) {
-        ModelAndView mv = new ModelAndView("redirect:/index");
+        ModelAndView mv = new ModelAndView("redirect:/");
         attributes.addFlashAttribute("msg", "Você saiu.");
         attributes.addFlashAttribute("classe", "verde");
         acessoAdm = false;
