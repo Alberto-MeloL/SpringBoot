@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrimônios</title>
+    <!-- <link rel="stylesheet" href="../static/css/style.css"> -->
+</head>
+
+<body>
+    <!-- apenas para teste -->
+    <!-- ver sobre medidas -->
+    <style>
+        :root {
+            --preto: #000000;
+            --cinza: #8080807a;
+            --branco: #ffffff;
+            --verde: #37c237d8;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .fundo {
+            width: 100%;
+            height: 100vh;
+            display: none;
+            background-color: var(--cinza);
+            filter: blur(20px);
+            position: fixed;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            z-index: 11;
+        }
+
+        header {
+            width: 100%;
+            height: 15vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            width: 10%;
+            height: 90%;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--cinza);
+        }
+
+        .logo img {
+            width: 100%;
+            height: 00px;
+        }
+
+        .menu-solicitacoes {
+            width: 100px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .solicitacoes {
+            width: 50%;
+            height: 100vh;
+            display: none;
+            position: fixed;
+            left: 0;
+            background-color: var(--branco);
+            border-radius: 0% 5% 5% 0%;
+            overflow: hidden;
+            z-index: 10;
+        }
+
+        .sair {
+            width: 90%;
+            height: 5px;
+        }
+
+        .sair button::after {
+            font-size: 1.25rem;
+            border-radius: 5px;
+            content: "<";
+        }
+
+        .sair button:hover::after {
+            content: "Fechar";
+            text-align: center;
+        }
+
+        .menu-linhas {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .menu-linhas span {
+            background-color: var(--preto);
+            height: 2px;
+            margin-bottom: 3px;
+        }
+
+        .menu-linhas span:nth-child(1) {
+            width: 50px;
+        }
+
+        .menu-linhas span:nth-child(2) {
+            width: 35px;
+        }
+
+        .menu-linhas span:nth-child(3) {
+            width: 20px;
+        }
+
+        .buscas {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .barra-pesquisa {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .acoes {
+            width: 20%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .acoes button {
+            width: 100%;
+            background-color: var(--verde);
+            color: var(--branco);
+            border: 1px solid var(--preto);
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .acoes-visivel {
+            width: 100%;
+            height: 100%;
+            background-color: var(--cinza);
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            /* porque so funciona o alinhamento com o justify-content> conter */
+        }
+
+        .add-administrador {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .add-funcionarios {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .acoes-visivel button {
+            width: 200px;
+            height: auto;
+        }
+
+        .container-estrutura {
+            width: 100%;
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container-blocos {
+            width: 80%;
+            height: 80%;
+            display: grid;
+            align-items: center;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .bloco-a,
+        .bloco-b,
+        .bloco-c,
+        .bloco-d {
+            background-color: var(--cinza);
+            border: 1px solid var(--preto);
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+
+    <!-- apenas para teeste -->
+    <div class="solicitacoes">
+        <div class="sair">
+            <button onclick="menuSolicClose()"></button>
+        </div>
+    </div>
+
+    <div class="fundo"></div>
+
+    <div class="container">
+
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="" alt="Foto perfil.">
+                </div>
+                <div class="menu-solicitacoes" onclick="menuSolicToggle()">
+
+                    <div class="menu-linhas">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+                <div class="buscas">
+
+                    <div class="barra-pesquisa">
+                        <input type="text" id="buscas" name="buscas">
+                        <select name="filtrar" id="filtar">
+                            <option value="">Filtrar</option>
+                            <option value="">Por sala</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="acoes">
+                    <div class="adicionar">
+                        <button type="button" onclick="maisAcoes()">Adicionar novo</button>
+                    </div>
+
+                    <div class="acoes-visivel">
+                        <div class="add-administrador">
+
+                            <button type="button">Adicionar Administrador</button>
+
+                            <button type="button">Remover Administrador</button>
+
+                        </div>
+                        <div class="add-funcionarios">
+
+                            <button type="button">Adicionar Funcionario</button>
+
+                            <button type="button">Remover Funcionario</button>
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container-estrutura">
+            <div class="container-blocos">
+
+                <div class="bloco-a">
+                    <p>A</p>
+                </div>
+
+                <div class="bloco-b">
+                    <p>A</p>
+                </div>
+
+                <div class="bloco-c">
+                    <p>A</p>
+                </div>
+
+                <div class="bloco-d">
+                    <p>A</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            var solicitacoes = document.querySelector(".solicitacoes");
+            var fundo = document.querySelector(".fundo");
+
+            window.menuSolicToggle = function () {
+                if (solicitacoes.style.display === "flex") {
+                    solicitacoes.style.display = "none";
+                    fundo.style.display = "block";
+                } else {
+                    solicitacoes.style.display = "flex";
+                    fundo.style.display = "block";
+                }
+                console.log("Display:", solicitacoes.style.display);
+            };
+
+            window.menuSolicClose = function () {
+                if (solicitacoes.style.display === "flex") {
+                    solicitacoes.style.display = "none";
+                    fundo.style.display = "none";
+                } else {
+                    solicitacoes.style.display = "flex";
+                    fundo.style.display = "block";
+                }
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            var addNovo = document.querySelector(".adicionar button");
+            var acoesVisivel = document.querySelector(".acoes-visivel");
+
+            window.maisAcoes = function() {
+                if (addNovo.style.display === "block") {
+                    acoesVisivel.style.display = "flex";
+                    addNovo.style.display = "none";
+                }else{
+                    acoesVisivel.style.display = "none";
+                    addNovo.style.display = "block";
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
